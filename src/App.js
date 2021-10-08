@@ -1,17 +1,8 @@
+import Routes from "./Routes";
 
 const App = () => {
   return (
-    <>
-      <header>
-        
-      </header>
-      <main>
-
-      </main>
-      <footer>
-        
-      </footer>
-    </>
+   <Routes/>
   );
 }
 
