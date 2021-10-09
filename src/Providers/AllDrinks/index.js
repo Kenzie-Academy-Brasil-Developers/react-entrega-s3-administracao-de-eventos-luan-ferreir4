@@ -11,7 +11,7 @@ export const DrinksProvider = ({ children }) => {
       axios
         .get("https://api.punkapi.com/v2/beers")
         .then((res) => setDrinkList(res.data)).catch(err=>console.log(err)),
-    [drinkList]
+    []
   );
 
   return (
