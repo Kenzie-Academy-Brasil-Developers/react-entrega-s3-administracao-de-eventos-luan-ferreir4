@@ -3,28 +3,30 @@ import Catalogue from "../Pages/Catalogue";
 import EventDetails from "../Pages/EventDetails";
 import EventList from "../Pages/EventList";
 import Home from "../Pages/Home";
-
+import { GlobalStyles } from "../styles/globalStyles";
 const Routes = () => {
-    return (
-        <Switch>
+  return (
+    <Switch>
+      <Route exact path="/">
+        <GlobalStyles />
+        <Home />
+      </Route>
 
-            <Route exact path="/">
-                <Home/>
-            </Route>
-            
-            <Route path="/catalogue">
-                <Catalogue/>
-            </Route>
-            
-            <Route path="/events">
-                <EventList/>
-            </Route>
-            
-            <Route path="/details">
-                <EventDetails/>
-            </Route>
+      <Route path="/catalogue">
+        <GlobalStyles />
+        <Catalogue />
+      </Route>
 
-        </Switch>
-    )
-}
+      <Route path="/events">
+        <GlobalStyles />
+        <EventList />
+      </Route>
+
+      <Route path="/details">
+        <GlobalStyles />
+        <EventDetails />
+      </Route>
+    </Switch>
+  );
+};
 export default Routes;
