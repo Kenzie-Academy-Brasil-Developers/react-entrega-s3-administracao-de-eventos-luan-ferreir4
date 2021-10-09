@@ -42,6 +42,7 @@ export const Main = styled.main`
     }
     img {
       width: 80vw;
+      max-width: 300px;
       background-image: #7e7e7e;
     }
     p {
