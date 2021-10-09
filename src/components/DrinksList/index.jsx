@@ -5,7 +5,6 @@ import { DrinksContext } from "../../Providers/AllDrinks";
 
 export const DrinkList = () => {
   const { drinkList } = useContext(DrinksContext);
-  console.log(drinkList);
   return (
     <Catalogue>
       <h1>Nossas bebidas disponíveis</h1>
