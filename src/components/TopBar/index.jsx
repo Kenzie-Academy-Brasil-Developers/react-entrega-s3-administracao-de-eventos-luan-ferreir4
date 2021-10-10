@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 
+<<<<<<< HEAD
 import { Bar } from "../../styles/topBar";
+=======
+import { Bar } from "../../styles/cataloguePage";
+>>>>>>> parent of d0510e9 (refactor: dividing TopBar style in a new folder)
 
 import { ButtonNav } from "../ButtonNav";
 
