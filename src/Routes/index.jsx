@@ -1,12 +1,13 @@
 import { Switch, Route } from "react-router";
 import Catalogue from "../Pages/Catalogue";
 import EventDetails from "../Pages/EventDetails";
-import EventList from "../Pages/EventList";
+import EventsPage from "../Pages/EventsPage";
 import Home from "../Pages/Home";
 import { GlobalStyles } from "../styles/globalStyles";
 const Routes = () => {
   return (
     <Switch>
+      
       <Route exact path="/">
         <GlobalStyles />
         <Home />
@@ -17,15 +18,16 @@ const Routes = () => {
         <Catalogue />
       </Route>
 
-      <Route path="/events">
+      <Route exact path="/events">
         <GlobalStyles />
-        <EventList />
+        <EventsPage />
       </Route>
 
-      <Route path="/details">
+      <Route path="/events/:type">
         <GlobalStyles />
         <EventDetails />
       </Route>
+
     </Switch>
   );
 };
