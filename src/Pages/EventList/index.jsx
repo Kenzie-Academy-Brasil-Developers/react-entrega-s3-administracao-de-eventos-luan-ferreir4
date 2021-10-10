@@ -1,7 +1,9 @@
+import { TopBar } from "../../components/TopBar";
+
 const EventList = () => {
     return(
         <>
-        Event List
+        <TopBar type="events"/>
         </>
     )    
 }
