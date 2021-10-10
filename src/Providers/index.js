@@ -1,12 +1,15 @@
 import { DrinksProvider } from "./AllDrinks";
 import { GraduationProvider } from "./GraduationDrinks";
 import { WeddingProvider } from "./WeddingDrinks";
+import { ConfratProvider } from "./ConfratDrinks";
 
 const Providers = ({ children }) => {
   return (
     <DrinksProvider>
       <GraduationProvider>
-        <WeddingProvider>{children}</WeddingProvider>
+        <WeddingProvider>
+          <ConfratProvider>{children}</ConfratProvider>
+        </WeddingProvider>
       </GraduationProvider>
     </DrinksProvider>
   );

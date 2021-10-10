@@ -25,7 +25,7 @@ export const WeddingProvider = ({ children }) => {
     const drink = drinkList.find( drink => drink.id === id);
     if (verifyId(id)) {
       setWeddingList([...weddingList, drink]);
-      console.log("added");
+      console.log("added to weeding");
     }
     else{
         console.log("Item ja adicionado");
