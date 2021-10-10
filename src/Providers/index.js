@@ -8,7 +8,9 @@ const Providers = ({ children }) => {
     <DrinksProvider>
       <GraduationProvider>
         <WeddingProvider>
-          <ConfratProvider>{children}</ConfratProvider>
+          <ConfratProvider>
+            {children}
+          </ConfratProvider>
         </WeddingProvider>
       </GraduationProvider>
     </DrinksProvider>
