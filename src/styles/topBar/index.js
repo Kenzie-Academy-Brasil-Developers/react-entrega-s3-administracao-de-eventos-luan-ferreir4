@@ -8,17 +8,14 @@ align-items: center;
 justify-content: space-between;
 width: 100vw;
 height: 12vh;
-
 background-color: #313131;
 text-align: center;
 box-shadow: 0px 2px 7px #595959;
-
 img {
   width: 44px;
   height: 40px;
   margin-left: 20px;
 }
-
 h1{
   margin: 0;
   color: #f5f5f5;
@@ -30,7 +27,6 @@ Button {
   color: #7e7e7e;
   border: 1px solid transparent;
   border-radius: 5px;
-
   &:hover {
     background-color: #7e7e7e;
     color: #f5d2d2;
