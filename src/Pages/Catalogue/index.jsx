@@ -4,7 +4,7 @@ import { DrinkList } from "../../components/DrinksList";
 const Catalogue = () => {
     return(
         <>
-        <TopBar type="Catálogo"/>
+        <TopBar type="catalogue"/>
         <DrinkList/>
         </>
     )    
