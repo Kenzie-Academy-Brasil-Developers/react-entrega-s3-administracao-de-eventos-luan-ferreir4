@@ -3,7 +3,7 @@ import { Card } from "../../styles/cataloguePage";
 import { Button } from "../Button";
 
 export const DrinkCard = ({
-  drink: { image_url, name, first_brewed, description },
+  drink: { id, image_url, name, first_brewed, description },
 }) => {
   const [showAdd, setShowAdd] = useState(false);
 
@@ -28,11 +28,11 @@ export const DrinkCard = ({
         <Card>
           <p>Tipo de evento</p>
           <section>
-            <Button type="graduation" />
+            <Button type="graduation" drinkId={id}/>
 
-            <Button type="wedding" />
+            <Button type="wedding" drinkId={id}/>
 
-            <Button type="confrat" />
+            <Button type="confrat" drinkId={id}/>
           </section>
 
           <button onClick={handleClick}>Fechar</button>
