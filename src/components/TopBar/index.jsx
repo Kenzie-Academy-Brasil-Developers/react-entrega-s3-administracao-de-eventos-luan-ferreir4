@@ -14,7 +14,7 @@ export const TopBar = ({ type }) => {
     if (type === "events") {
         setTitle("Eventos");
     }
-  }, [title]);
+  }, [type]);
 
   return (
     <Bar>
