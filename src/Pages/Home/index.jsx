@@ -1,7 +1,6 @@
-import { Button } from "../../components/Button";
-import { Welcome } from "../../components/Welcome";
 import { Header, Main } from "../../styles/landingPage";
-
+import { Welcome } from "../../components/Welcome";
+import { ButtonNav } from "../../components/ButtonNav";
 const Home = () => {
   return (
     <>
@@ -11,7 +10,7 @@ const Home = () => {
       
       <Main>
         <Welcome />
-        <Button type="initial"/>
+        <ButtonNav type="initial"/>
       </Main>
     </>
   );
