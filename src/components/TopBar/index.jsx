@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Bar } from "../../styles/cataloguePage";
+import { Bar } from "../../styles/TopBar";
 
 import { ButtonNav } from "../ButtonNav";
 
@@ -25,8 +25,8 @@ export const TopBar = ({ type }) => {
         <ButtonNav type="toEvents" />
       ) : type === "events" ? (
         <section>
-        <ButtonNav type="toEvents" />
-        <ButtonNav type="toHome"/>
+        <ButtonNav type="toCatalogue"/>
+        <ButtonNav type="toInitial"/>
         </section>
       ) : (
         <></>
