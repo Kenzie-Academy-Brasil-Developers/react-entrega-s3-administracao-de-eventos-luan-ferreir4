@@ -7,8 +7,8 @@ import { WeddingContext } from "../../Providers/WeddingDrinks";
 import { ConfratContext } from "../../Providers/ConfratDrinks";
 import { EventDrinkCard } from "../EventDrinkCard";
 
-export const EventDrinks = ({ listType }) => {
-  console.log(listType)
+export const EventDrinks = ({ listType, listTitle }) => {
+
   const { graduationList } = useContext(GraduationContext);
   const { weddingList } = useContext(WeddingContext);
   const { confratList } = useContext(ConfratContext);
@@ -22,13 +22,21 @@ export const EventDrinks = ({ listType }) => {
     } else if (listType === "conf") {
       setToRenderList(confratList);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [listType]);
   
-  return( 
+  }, [listType, graduationList, weddingList, confratList]);
+  
+  return(
     <EventDrinkList>
-      {
-        toRenderList.map( (drink, index) => <EventDrinkCard key={index} drink={drink}/> )
+
+    <h1>{listTitle}</h1>
+    
+    <hr/>
+      {toRenderList.length !== 0 ? (
+        toRenderList.map( (drink, index) => <EventDrinkCard key={index} drink={drink} eventType={listType}/> )
+      
+      ) : (
+        <h1>Lista vazia</h1>
+      )
       }
     </EventDrinkList>
     ) ;
