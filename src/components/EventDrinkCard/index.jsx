@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import { EventCard } from "../../styles/eventDrinks";
+import { ButtonRemove } from "../ButtonRemove";
 
 export const EventDrinkCard = ({
-  drink: { id, image_url, name, first_brewed, description },
+  drink: { id, image_url, name}, eventType
 }) => {
 
   const [formatedName, setFormatedName] = useState(name);
-
-  const handleClick = () => {
-   
-  };
 
   useEffect(()=>{
     if(name.length >= 15){
@@ -23,7 +20,8 @@ export const EventDrinkCard = ({
       <img src={image_url} alt="drink" />
       <h5>{formatedName}</h5>
 
-      <button onClick={handleClick}>Remover</button>
+     <ButtonRemove eventType={eventType} drinkId={id}/>
+     
     </EventCard>
   );
 };
