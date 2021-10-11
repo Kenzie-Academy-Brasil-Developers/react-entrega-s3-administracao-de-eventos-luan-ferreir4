@@ -70,17 +70,6 @@ export const Card = styled.div`
     }
   }
 
-  h4 {
-    font-weight: 300;
-    font-size: 1.5rem;
-    margin: 0 0 5px;
-  }
-
-  p {
-    margin: 0 0 12px ;
-    font-size: 0.8rem;
-  }
-
   section {
     display: flex;
     flex-direction: column;
@@ -104,6 +93,49 @@ export const Card = styled.div`
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+`;
+
+export const DescpCard = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  width: 200px;
+  height: 330px;
+  padding: 5px 10px 20px;
+  margin: 15px 10px;
+
+  background-color: pink;
+  border-radius: 10px;
+
+  h4 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: 0 0 5px;
+  }
+
+
+  p {
+    margin: 0 0 8px;
+    font-size: 0.7rem;
+  }
+
+  button {
+    padding: 2px 20px;
+    margin-bottom: 5px;
+    background-color: #7e7e7e;
+    color: #f5f5f5;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: transparent;
+      color: #7e7e7e;
+      border-color: #595959;
     }
   }
 `;

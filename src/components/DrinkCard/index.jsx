@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card } from "../../styles/cataloguePage";
+import { DescpCard } from "../../styles/cataloguePage";
 import { Button } from "../Button";
 
 export const DrinkCard = ({
@@ -63,11 +64,12 @@ export const DrinkCard = ({
 
       ) : !addContainer && descContainer ?(
 
-        <Card>
+        <DescpCard>
           <h4>{name}</h4>
+          <small>Fabrication start {first_brewed}</small>
           <p>{description}</p>
           <button onClick={showDesc}>Fechar</button>
-        </Card>
+        </DescpCard>
 
       ) : <></> }
     </>
