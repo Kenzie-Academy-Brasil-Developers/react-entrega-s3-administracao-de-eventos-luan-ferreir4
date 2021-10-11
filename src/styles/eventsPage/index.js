@@ -23,19 +23,22 @@ export const Card = styled.div`
   text-align: left;
   background-color: #f5f5f5;
   width: 80vw;
-  padding: 20px 8px;
-  margin: 15px 0;
+  max-width: 800px;
+  padding: 20px;
+  margin: 18px 0;
 
   border-radius: 10px;
 
   img {
     width: 60px;
   }
-  h1{
+
+  h1 {
     margin: 10px 0;
     font-size: 2rem;
     font-weight: 500;
   }
+  
   button {
     padding: 10px 20px;
     background-color: #7e7e7e;
