@@ -35,14 +35,14 @@ export const GraduationProvider = ({ children }) => {
         }
     }
 
-    const remove = (id) => {
+    const removeFromGrad = (id) => {
         setGraduationList(
             graduationList.filter( drink => drink.id !== id)
         );
     }
     
     return(
-        <GraduationContext.Provider value={{ graduationList, addToGraduation, remove }}>
+        <GraduationContext.Provider value={{ graduationList, addToGraduation, removeFromGrad }}>
             { children }
         </GraduationContext.Provider>
     )

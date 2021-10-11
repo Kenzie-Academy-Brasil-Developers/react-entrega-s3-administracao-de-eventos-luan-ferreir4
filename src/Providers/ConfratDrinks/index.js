@@ -31,9 +31,9 @@ export const ConfratProvider = ({ children }) => {
     }
   };
 
-  const remove = (id) => {
+  const removeFromConf = (id) => {
     setConfratList(confratList.filter((drink) => drink.id !== id));
   };
 
-  return <ConfratContext.Provider value={{ confratList, addToConfrat, remove }}>{children}</ConfratContext.Provider>;
+  return <ConfratContext.Provider value={{ confratList, addToConfrat, removeFromConf }}>{children}</ConfratContext.Provider>;
 };

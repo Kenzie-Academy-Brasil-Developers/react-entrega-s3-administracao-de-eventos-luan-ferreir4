@@ -32,14 +32,14 @@ export const WeddingProvider = ({ children }) => {
     }
   };
   // console.log(weddingList)
-  const remove = (id) => {
+  const removeFromWed = (id) => {
    setWeddingList(
        weddingList.filter( drink => drink.id !== id )
    );
   };
 
   return (
-    <WeddingContext.Provider value={{ weddingList, addToWedding, remove }}>
+    <WeddingContext.Provider value={{ weddingList, addToWedding, removeFromWed }}>
       {children}
     </WeddingContext.Provider>
   );
