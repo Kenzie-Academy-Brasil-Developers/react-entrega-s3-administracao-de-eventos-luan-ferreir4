@@ -19,9 +19,10 @@ const EventDetails = () => {
             setListType("conf")
         }
     },[event]);
+    
     return(
         <>
-        <TopBar/>
+        <TopBar type="details"/>
         <EventDrinks listType={listType}/>
         </>
     )    

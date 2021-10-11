@@ -10,23 +10,33 @@ export const TopBar = ({ type }) => {
   useEffect(() => {
     if (type === "catalogue") {
       setTitle("Catálogo");
-    }
-    if (type === "events") {
-        setTitle("Eventos");
+    } else if (type === "events") {
+      setTitle("Eventos");
+    } else if (type === "details") {
+      setTitle("Detalhes");
     }
   }, [type]);
 
   return (
     <Bar>
-      <img src="images/bottleWhite.png" alt="wine-bottle" />
+      {type !== "details" ? (
+        <img src="images/bottleWhite.png" alt="wine-bottle" />
+      ) : (
+        <></>
+      )}
       <h1>{title}</h1>
 
       {type === "catalogue" ? (
         <ButtonNav type="toEvents" />
       ) : type === "events" ? (
         <section>
-        <ButtonNav type="toCatalogue" />
-        <ButtonNav type="toInitial"/>
+          <ButtonNav type="toCatalogue" />
+          <ButtonNav type="toInitial" />
+        </section>
+      ) : type === "details" ? (
+        <section>
+          <ButtonNav type="toCatalogue" />
+          <ButtonNav type="toEvents" />
         </section>
       ) : (
         <></>

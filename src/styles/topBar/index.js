@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Bar = styled.header`
+z-index: 1;
 position: fixed;
 top: 0;
 display: flex;
@@ -11,12 +12,14 @@ height: 12vh;
 background-color: #313131;
 text-align: center;
 box-shadow: 0px 2px 7px #595959;
+
 img {
   width: 44px;
   height: 40px;
   margin-left: 20px;
 }
 h1{
+  padding: 0 20px;
   margin: 0;
   color: #f5f5f5;
 }
