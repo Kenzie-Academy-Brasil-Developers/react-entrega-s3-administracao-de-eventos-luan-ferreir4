@@ -6,13 +6,13 @@ export const Catalogue = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 92vw;
-  
-  padding: 12vh 0  0;
+
+  padding: 12vh 0 0;
   margin: 0 auto;
   background-color: #f5f5f5;
   box-shadow: 0px 2px 7px #595959;
 
-  h1{
+  h1 {
     font-weight: 300;
     margin-bottom: 0;
   }
@@ -24,24 +24,40 @@ export const Catalogue = styled.div`
 `;
 
 export const Card = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  background-color: pink;
-  width: 220px;
-  padding: 20px 8px;
-  margin: 15px 0;
 
+  width: 200px;
+  height: 295px;
+  padding: 20px 10px;
+  margin: 15px 10px;
+
+  background-color: pink;
   border-radius: 10px;
 
   img {
-    width: 60px;
+    width: 42px;
   }
-  h5{
+
+  h5 {
     margin: 10px 0;
     font-size: 2rem;
     font-weight: 500;
   }
+
+  div {
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+
   button {
     padding: 10px 20px;
+    margin-bottom: 5px;
     background-color: #7e7e7e;
     color: #f5f5f5;
     border: 1px solid transparent;
@@ -54,6 +70,17 @@ export const Card = styled.div`
     }
   }
 
+  h4 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: 0 0 5px;
+  }
+
+  p {
+    margin: 0 0 12px ;
+    font-size: 0.8rem;
+  }
+
   section {
     display: flex;
     flex-direction: column;
@@ -62,10 +89,10 @@ export const Card = styled.div`
     width: 50%;
     margin: 20px auto;
 
-    p{
+    p {
       margin-top: 0;
     }
-     
+
     Button {
       padding: 6px 10px;
       margin-bottom: 10px;

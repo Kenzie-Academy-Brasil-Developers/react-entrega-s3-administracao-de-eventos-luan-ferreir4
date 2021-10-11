@@ -1,30 +1,53 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "../../styles/cataloguePage";
 import { Button } from "../Button";
 
 export const DrinkCard = ({
   drink: { id, image_url, name, first_brewed, description },
 }) => {
-  const [showAdd, setShowAdd] = useState(false);
+  const [ addContainer, setAddContainer ] = useState(false);
+  const [ descContainer, setDescContainer ] = useState(false);
 
-  const handleClick = () => {
-    if (!showAdd) {
-      setShowAdd(true);
+  const [formatedName, setFormatedName] = useState(name);
+  
+  const showAdd = () => {
+    if (!addContainer) {
+      setAddContainer(true);
     } else {
-      setShowAdd(false);
+      setAddContainer(false);
+    }
+  };
+  
+  const showDesc = () => {
+    if (!descContainer) {
+      setDescContainer(true);
+    } else {
+      setDescContainer(false);
     }
   };
 
+  useEffect(()=>{
+    if(name.length >= 15){
+      const newName = name.substring(0,15)
+      setFormatedName(newName.concat("..."))
+    }
+  },[name]);
+
   return (
     <>
-      {!showAdd ? (
+      {!addContainer && !descContainer? (
+
         <Card>
           <img src={image_url} alt="" />
-          <h5>{name}</h5>
-
-          <button onClick={handleClick}>Adicionar</button>
+          <h5>{formatedName}</h5>
+          <div>
+          <button onClick={showDesc}>Descrição</button>
+          <button onClick={showAdd}>Adicionar</button>
+          </div>
         </Card>
-      ) : (
+
+      ) : addContainer && !descContainer ? (
+
         <Card>
           <p>Tipo de evento</p>
           <section>
@@ -35,9 +58,18 @@ export const DrinkCard = ({
             <Button type="confrat" drinkId={id}/>
           </section>
 
-          <button onClick={handleClick}>Fechar</button>
+          <button onClick={showAdd}>Fechar</button>
         </Card>
-      )}
+
+      ) : !addContainer && descContainer ?(
+
+        <Card>
+          <h4>{name}</h4>
+          <p>{description}</p>
+          <button onClick={showDesc}>Fechar</button>
+        </Card>
+
+      ) : <></> }
     </>
   );
 };
