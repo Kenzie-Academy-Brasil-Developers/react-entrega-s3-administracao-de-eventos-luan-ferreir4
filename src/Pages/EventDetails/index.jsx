@@ -8,22 +8,27 @@ const EventDetails = () => {
     const params = useParams();
     const event = params.type;
     const [ listType, setListType ] = useState("");
+    const [ listTitle, setListTitle ] = useState("");
 
     useEffect(()=>{
         if(event === "graduation") {
-            setListType("grad")
+            setListType("grad");
+            setListTitle("Formatura");
         } else if(event === "wedding") {
-            setListType("wed")
+            setListType("wed");
+            setListTitle("Casamento");
         }
         else if(event === "confrat") {
             setListType("conf")
+            setListTitle("Confraternização")
         }
     },[event]);
     
     return(
         <>
         <TopBar type="details"/>
-        <EventDrinks listType={listType}/>
+        
+        <EventDrinks listType={listType} listTitle={listTitle}/>
         </>
     )    
 }
