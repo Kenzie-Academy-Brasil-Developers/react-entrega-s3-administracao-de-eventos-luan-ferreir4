@@ -140,7 +140,7 @@ export const DescpCard = styled.div`
   }
 
   button {
-    padding: 2px 20px;
+    padding: 5px 20px;
     margin-bottom: 5px;
     background-color: #7e7e7e;
     color: #f5f5f5;
