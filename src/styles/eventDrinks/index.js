@@ -21,6 +21,15 @@ export const EventDrinkList = styled.div`
     width: 75vw;
     max-width: 700px;
   }
+
+  @media (min-width: 700px) {
+    section{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width:98%;
+    }
+  }
 `;
 
 export const EventCard = styled.div`
@@ -38,17 +47,26 @@ export const EventCard = styled.div`
   box-shadow: 0px 2px 7px #595959;
 
   img {
+    position: absolute;
+    bottom: 40%;
     width: 42px;
   }
+  
 
   h5 {
+    position: absolute;
+    bottom: 20%;
+    
     margin: 10px 0;
+    
+    border-bottom: 1px solid transparent;
     font-size: 2rem;
     font-weight: 500;
+
   }
   button {
     position: absolute;
-    bottom: 3%;
+    bottom: 5%;
     padding: 10px 20px;
     background-color: #7e7e7e;
     color: #f5f5f5;
@@ -59,6 +77,12 @@ export const EventCard = styled.div`
       background-color: transparent;
       color: #7e7e7e;
       border-color: #595959;
+    }
+  }
+
+  &:hover{
+    h5{
+      border-bottom: 1px solid #7e7e7e;
     }
   }
 `;

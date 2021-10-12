@@ -66,7 +66,7 @@ export const DrinkCard = ({
 
         <DescpCard>
           <h4>{name}</h4>
-          <small>Fabrication start {first_brewed}</small>
+          <small>Fabrication start - {first_brewed}</small>
           <p>{description}</p>
           <button onClick={showDesc}>Fechar</button>
         </DescpCard>

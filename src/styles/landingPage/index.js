@@ -23,9 +23,12 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   height: 88vh;
+  max-width: 900px;
   padding-top: 12vh;
-  background-color: #f5d2d2;
+  margin: 0 auto;
+  
   color: #595959;
 
   section {
@@ -65,5 +68,30 @@ export const Main = styled.main`
       background-color: #f5f5f5;
       color: #7e7e7e;
     }
+  }
+  div{
+    img{
+      display: none;
+    }
+  }
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-around;
+
+    height: 95vh;
+    padding-top: 5vh;
+    section {
+      width: 50%;
+      margin: 0;
+    }
+
+    div{
+    img{
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+    }
+  }
   }
 `;

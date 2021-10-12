@@ -9,9 +9,11 @@ export const DrinkList = () => {
     <Catalogue>
       <h1>Nossas bebidas disponíveis</h1>
       <img src="images/divider.png" alt="divider" />
+      <section>
       {drinkList.map((item, index) => (
         <DrinkCard key={index} drink={item} />
       ))}
+      </section>
     </Catalogue>
   );
 };

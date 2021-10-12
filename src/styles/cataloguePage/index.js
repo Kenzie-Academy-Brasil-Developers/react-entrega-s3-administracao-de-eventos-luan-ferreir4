@@ -21,6 +21,14 @@ export const Catalogue = styled.div`
     width: 80vw;
     max-width: 300px;
   }
+
+  @media (min-width: 700px) {
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 `;
 
 export const Card = styled.div`
@@ -39,10 +47,14 @@ export const Card = styled.div`
   border-radius: 10px;
 
   img {
+    position: absolute;
+    bottom: 47%;
     width: 42px;
   }
 
   h5 {
+    position: absolute;
+    bottom: 28%;
     margin: 10px 0;
     font-size: 2rem;
     font-weight: 500;
@@ -105,7 +117,7 @@ export const DescpCard = styled.div`
   text-align: center;
 
   width: 200px;
-  height: 330px;
+  height: 360px;
   padding: 5px 10px 20px;
   margin: 15px 10px;
 
@@ -117,11 +129,14 @@ export const DescpCard = styled.div`
     font-size: 1.5rem;
     margin: 0 0 5px;
   }
-
-
+  small {
+    font-size: 0.95rem;
+    margin-bottom: 7px;
+    color: #7e7e7e;
+  }
   p {
     margin: 0 0 8px;
-    font-size: 0.7rem;
+    font-size: 0.71rem;
   }
 
   button {

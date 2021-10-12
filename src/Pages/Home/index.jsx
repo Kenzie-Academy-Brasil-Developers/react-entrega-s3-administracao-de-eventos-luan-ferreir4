@@ -10,7 +10,10 @@ const Home = () => {
       
       <Main>
         <Welcome />
+        <div>
+        <img src="images/serving-wine.png" alt="seving-wine" />
         <ButtonNav type="initial"/>
+        </div>
       </Main>
     </>
   );
