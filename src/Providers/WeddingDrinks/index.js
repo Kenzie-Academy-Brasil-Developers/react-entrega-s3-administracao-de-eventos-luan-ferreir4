@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { DrinksContext } from "../AllDrinks";
 
 import { createContext, useState } from "react";
@@ -6,10 +6,11 @@ import { createContext, useState } from "react";
 export const WeddingContext = createContext();
 
 export const WeddingProvider = ({ children }) => {
-
   const { drinkList } = useContext(DrinksContext);
 
-  const [weddingList, setWeddingList] = useState([]);
+  const [weddingList, setWeddingList] = useState(
+    JSON.parse(localStorage.getItem("weddingList")) || []
+  );
 
   const verifyId = (id) => {
     const existing = weddingList.find((drink) => drink.id === id);
@@ -22,24 +23,31 @@ export const WeddingProvider = ({ children }) => {
   };
 
   const addToWedding = (id) => {
-    const drink = drinkList.find( drink => drink.id === id);
+    const drink = drinkList.find((drink) => drink.id === id);
     if (verifyId(id)) {
       setWeddingList([...weddingList, drink]);
       console.log("added to weeding");
-    }
-    else{
-        console.log("Item ja adicionado");
+    } else {
+      console.log("Item ja adicionado");
     }
   };
-  // console.log(weddingList)
+
+  localStorage.setItem("weddingList", JSON.stringify(weddingList));
+
+  useEffect(() => {
+    if (weddingList.length === 0) {
+      localStorage.removeItem("weddingList");
+    }
+  }, [weddingList]);
+
   const removeFromWed = (id) => {
-   setWeddingList(
-       weddingList.filter( drink => drink.id !== id )
-   );
+    setWeddingList(weddingList.filter((drink) => drink.id !== id));
   };
 
   return (
-    <WeddingContext.Provider value={{ weddingList, addToWedding, removeFromWed }}>
+    <WeddingContext.Provider
+      value={{ weddingList, addToWedding, removeFromWed }}
+    >
       {children}
     </WeddingContext.Provider>
   );
