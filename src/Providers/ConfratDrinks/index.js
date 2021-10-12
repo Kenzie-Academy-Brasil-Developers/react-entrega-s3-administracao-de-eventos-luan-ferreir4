@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { DrinksContext } from "../AllDrinks";
+import { AlertsContext } from "../Alerts";
 
 import { createContext, useState } from "react";
 
@@ -7,6 +8,9 @@ export const ConfratContext = createContext();
 
 export const ConfratProvider = ({ children }) => {
   const { drinkList } = useContext(DrinksContext);
+
+  const { handleAdded } = useContext(AlertsContext);
+  const { handleAlready } = useContext(AlertsContext);
 
   const [confratList, setConfratList] = useState(
     JSON.parse(localStorage.getItem("confratList")) || []
@@ -27,9 +31,10 @@ export const ConfratProvider = ({ children }) => {
 
     if (verifyId(id)) {
       setConfratList([...confratList, drink]);
-
+      handleAdded();
       console.log("Added to confrat");
     } else {
+      handleAlready();
       console.log("Item ja adicionado");
     }
   };

@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { DrinksContext } from "../AllDrinks";
+import { AlertsContext } from "../Alerts";
 
 import { createContext, useState } from "react";
 
@@ -7,6 +8,9 @@ export const GraduationContext = createContext();
 
 export const GraduationProvider = ({ children }) => {
   const { drinkList } = useContext(DrinksContext);
+
+  const { handleAdded } = useContext(AlertsContext);
+  const { handleAlready } = useContext(AlertsContext);
 
   const [graduationList, setGraduationList] = useState(
     JSON.parse(localStorage.getItem("graduationList")) || []
@@ -27,8 +31,10 @@ export const GraduationProvider = ({ children }) => {
 
     if (verifyId(id)) {
       setGraduationList([...graduationList, drink]);
+      handleAdded();
       console.log("added to graduation");
     } else {
+      handleAlready();
       console.log("Item ja adicionado");
     }
   };

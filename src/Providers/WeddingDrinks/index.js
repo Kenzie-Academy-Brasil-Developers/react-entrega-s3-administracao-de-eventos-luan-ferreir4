@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { DrinksContext } from "../AllDrinks";
+import { AlertsContext } from "../Alerts";
 
 import { createContext, useState } from "react";
 
@@ -7,6 +8,9 @@ export const WeddingContext = createContext();
 
 export const WeddingProvider = ({ children }) => {
   const { drinkList } = useContext(DrinksContext);
+
+  const { handleAdded } = useContext(AlertsContext);
+  const { handleAlready } = useContext(AlertsContext);
 
   const [weddingList, setWeddingList] = useState(
     JSON.parse(localStorage.getItem("weddingList")) || []
@@ -26,8 +30,10 @@ export const WeddingProvider = ({ children }) => {
     const drink = drinkList.find((drink) => drink.id === id);
     if (verifyId(id)) {
       setWeddingList([...weddingList, drink]);
+      handleAdded();
       console.log("added to weeding");
     } else {
+      handleAlready();
       console.log("Item ja adicionado");
     }
   };
