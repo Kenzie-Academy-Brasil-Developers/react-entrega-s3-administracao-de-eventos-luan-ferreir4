@@ -1,4 +1,4 @@
-import { useContext } from "react/cjs/react.development";
+import { useContext } from "react";
 import { AlertsContext } from "../../Providers/Alerts";
 import { AlertCard } from "../../styles/alertCard";
 import { TopBar } from "../../components/TopBar";
