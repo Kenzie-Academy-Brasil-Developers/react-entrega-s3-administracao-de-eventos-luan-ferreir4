@@ -13,14 +13,14 @@ const EventDetails = () => {
     useEffect(()=>{
         if(event === "graduation") {
             setListType("grad");
-            setListTitle("Formatura");
+            setListTitle("Graduation");
         } else if(event === "wedding") {
             setListType("wed");
-            setListTitle("Casamento");
+            setListTitle("Wedding");
         }
         else if(event === "confrat") {
             setListType("conf")
-            setListTitle("Confraternização")
+            setListTitle("Confraternization")
         }
     },[event]);
     

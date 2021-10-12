@@ -20,5 +20,5 @@ export const ButtonRemove = ({ eventType, drinkId }) => {
       }
   };
 
-  return <button onClick={chooseAction}>Remover</button>;
+  return <button onClick={chooseAction}>Remove</button>;
 };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Catalogue = styled.div`
+export const Catalog = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

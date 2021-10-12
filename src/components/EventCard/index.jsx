@@ -4,25 +4,22 @@ import { useEffect, useState } from "react";
 import { ButtonNav } from "../ButtonNav";
 
 export const EventCard = ({ type }) => {
-  
   const [content, setContent] = useState("");
 
   useEffect(() => {
     if (type === "graduation") {
-      setContent("Formatura");
+      setContent("Graduation");
     } else if (type === "wedding") {
-      setContent("Casamento");
-    }
-    else if
-    (type === "confrat") {
-      setContent("Confraternização");
+      setContent("Wedding");
+    } else if (type === "confrat") {
+      setContent("Confraternization");
     }
   }, [type]);
 
   return (
     <Card>
       <h1>{content}</h1>
-      <ButtonNav type={type}/>
+      <ButtonNav type={type} />
     </Card>
   );
 };

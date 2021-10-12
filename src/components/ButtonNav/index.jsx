@@ -9,41 +9,41 @@ export const ButtonNav = ({ type }) => {
 
   useEffect(() => {
     if (type === "initial") {
-      setContent("Veja nosso catálogo");
+      setContent("Check out our catalog");
     } else if (type === "toEvents") {
-      setContent("Eventos");
+      setContent("Events");
     }
-    else if (type === "toCatalogue") {
-      setContent("Catálogo");
+    else if (type === "toCatalog") {
+      setContent("Catalog");
     } else if 
     (type === "toInitial") {
       setContent(<AiFillHome/>);
     }
 
-    if(type === "graduation"){
-      setContent("Ver detalhes")
+    else if(type === "graduation"){
+      setContent("See list")
     } else if(type === "wedding"){
-      setContent("Ver detalhes")
+      setContent("See list")
     } else if(type === "confrat"){
-      setContent("Ver detalhes")
+      setContent("See list")
     }
 
   }, [type]);
 
   const chooseType = () => {
     if (type === "initial") {
-      history.push("/catalogue");
+      history.push("/catalog");
     } else if (type === "toEvents") {
       history.push("/events");
     } else if
-    (type === "toCatalogue") {
-      history.push("/catalogue");
+    (type === "toCatalog") {
+      history.push("/catalog");
     } else if 
     (type === "toInitial") {
       history.push("/");
     } 
 
-    if(type === "graduation"){
+    else if(type === "graduation"){
       history.push(`/events/${type}`);
     } else if(type === "wedding"){
       history.push(`/events/${type}`)

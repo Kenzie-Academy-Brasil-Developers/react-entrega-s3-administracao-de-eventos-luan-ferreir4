@@ -22,6 +22,8 @@ h1{
   padding: 0 20px;
   margin: 0;
   color: #f5f5f5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
 }
 Button {
   padding: 6px 12px;

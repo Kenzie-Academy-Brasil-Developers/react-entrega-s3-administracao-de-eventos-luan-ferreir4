@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Card } from "../../styles/cataloguePage";
-import { DescpCard } from "../../styles/cataloguePage";
+import { Card } from "../../styles/catalogPage";
+import { DescpCard } from "../../styles/catalogPage";
 import { Button } from "../Button";
 
 export const DrinkCard = ({
@@ -42,15 +42,15 @@ export const DrinkCard = ({
           <img src={image_url} alt="" />
           <h5>{formatedName}</h5>
           <div>
-          <button onClick={showDesc}>Descrição</button>
-          <button onClick={showAdd}>Adicionar</button>
+          <button onClick={showDesc}>Description</button>
+          <button onClick={showAdd}>Add</button>
           </div>
         </Card>
 
       ) : addContainer && !descContainer ? (
 
         <Card>
-          <p>Tipo de evento</p>
+          <p>Pick an event</p>
           <section>
             <Button type="graduation" drinkId={id}/>
 
@@ -59,7 +59,7 @@ export const DrinkCard = ({
             <Button type="confrat" drinkId={id}/>
           </section>
 
-          <button onClick={showAdd}>Fechar</button>
+          <button onClick={showAdd}>Close</button>
         </Card>
 
       ) : !addContainer && descContainer ?(
@@ -68,7 +68,7 @@ export const DrinkCard = ({
           <h4>{name}</h4>
           <small>Fabrication start - {first_brewed}</small>
           <p>{description}</p>
-          <button onClick={showDesc}>Fechar</button>
+          <button onClick={showDesc}>Close</button>
         </DescpCard>
 
       ) : <></> }

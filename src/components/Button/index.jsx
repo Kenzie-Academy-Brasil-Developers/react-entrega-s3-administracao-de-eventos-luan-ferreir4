@@ -15,11 +15,11 @@ export const Button = ({ type, drinkId }) => {
 
   useEffect(() => {
     if (type === "graduation") {
-      setContent("Formatura");
+      setContent("Graduation");
     } else if (type === "wedding") {
-      setContent("Casamento");
+      setContent("Wedding");
     } else if (type === "confrat") {
-      setContent("Confraternização");
+      setContent("Confraternization");
     }
   }, [type]);
 

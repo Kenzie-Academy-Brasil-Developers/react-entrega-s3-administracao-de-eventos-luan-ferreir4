@@ -36,7 +36,7 @@ export const EventDrinks = ({ listType, listTitle }) => {
         toRenderList.map( (drink, index) => <EventDrinkCard key={index} drink={drink} eventType={listType}/> )
       
       ) : (
-        <h1>Lista vazia</h1>
+        <h1>Empty list</h1>
       )
       }
     </section>

@@ -4,7 +4,7 @@ import { AlertCard } from "../../styles/alertCard";
 import { TopBar } from "../../components/TopBar";
 import { DrinkList } from "../../components/DrinksList";
 
-const Catalogue = () => {
+const Catalog = () => {
 
     const { added } = useContext(AlertsContext);
     
@@ -18,9 +18,9 @@ const Catalogue = () => {
         {already &&
             <AlertCard  style={{backgroundColor: "#f4735d", top: "20%"}}>Already added to this event</AlertCard>
         }
-        <TopBar type="catalogue"/>
+        <TopBar type="catalog"/>
         <DrinkList/>
         </>
     )    
 }
-export default Catalogue;
+export default Catalog;

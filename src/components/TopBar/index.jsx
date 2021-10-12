@@ -8,12 +8,12 @@ export const TopBar = ({ type }) => {
   const [title, setTitle] = useState("");
 
   useEffect(() => {
-    if (type === "catalogue") {
-      setTitle("Catálogo");
+    if (type === "catalog") {
+      setTitle("Catalog");
     } else if (type === "events") {
-      setTitle("Eventos");
+      setTitle("Events");
     } else if (type === "details") {
-      setTitle("Detalhes");
+      setTitle("Details");
     }
   }, [type]);
 
@@ -26,16 +26,16 @@ export const TopBar = ({ type }) => {
       )}
       <h1>{title}</h1>
 
-      {type === "catalogue" ? (
+      {type === "catalog" ? (
         <ButtonNav type="toEvents" />
       ) : type === "events" ? (
         <section>
-          <ButtonNav type="toCatalogue" />
+          <ButtonNav type="toCatalog" />
           <ButtonNav type="toInitial" />
         </section>
       ) : type === "details" ? (
         <section>
-          <ButtonNav type="toCatalogue" />
+          <ButtonNav type="toCatalog" />
           <ButtonNav type="toEvents" />
         </section>
       ) : (

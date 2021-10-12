@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router";
-import Catalogue from "../Pages/Catalogue";
+import Catalog from "../Pages/Catalog";
 import EventDetails from "../Pages/EventDetails";
 import EventsPage from "../Pages/EventsPage";
 import Home from "../Pages/Home";
@@ -13,9 +13,9 @@ const Routes = () => {
         <Home />
       </Route>
 
-      <Route path="/catalogue">
+      <Route path="/catalog">
         <GlobalStyles />
-        <Catalogue />
+        <Catalog />
       </Route>
 
       <Route exact path="/events">
