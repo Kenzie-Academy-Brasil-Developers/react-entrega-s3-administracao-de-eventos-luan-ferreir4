@@ -32,10 +32,8 @@ export const GraduationProvider = ({ children }) => {
     if (verifyId(id)) {
       setGraduationList([...graduationList, drink]);
       handleAdded();
-      console.log("added to graduation");
     } else {
       handleAlready();
-      console.log("Item ja adicionado");
     }
   };
 

@@ -32,10 +32,8 @@ export const ConfratProvider = ({ children }) => {
     if (verifyId(id)) {
       setConfratList([...confratList, drink]);
       handleAdded();
-      console.log("Added to confrat");
     } else {
       handleAlready();
-      console.log("Item ja adicionado");
     }
   };
 

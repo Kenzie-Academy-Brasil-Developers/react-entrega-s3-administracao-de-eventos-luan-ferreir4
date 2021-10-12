@@ -1,8 +1,6 @@
 import { createContext, useState } from "react";
 
-// export const AddedContext = createContext();
 export const AlertsContext = createContext();
-// export const AlreadyContext = createContext();
 
 export const AlertsProvider = ({ children }) => {
   const [added, setAdded] = useState(false);

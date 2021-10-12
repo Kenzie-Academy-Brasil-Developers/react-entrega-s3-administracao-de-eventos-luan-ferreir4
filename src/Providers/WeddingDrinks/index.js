@@ -31,10 +31,8 @@ export const WeddingProvider = ({ children }) => {
     if (verifyId(id)) {
       setWeddingList([...weddingList, drink]);
       handleAdded();
-      console.log("added to weeding");
     } else {
       handleAlready();
-      console.log("Item ja adicionado");
     }
   };
 
