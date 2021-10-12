@@ -18,7 +18,6 @@ export const WeddingProvider = ({ children }) => {
 
   const verifyId = (id) => {
     const existing = weddingList.find((drink) => drink.id === id);
-    console.log(existing);
     if (existing) {
       return false;
     } else {
